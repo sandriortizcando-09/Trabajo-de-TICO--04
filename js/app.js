@@ -191,6 +191,8 @@ detalle = detalle.map(d => ({
     setKPI("kpiUnidades", unidades);
     setKPI("kpiBeneficioTotal", beneficio.toFixed(2));
     setKPI("kpiBeneficioMedio", num ? (beneficio / num).toFixed(2) : "0.00");
+ const unidadesMedia = num ? (unidades / num) : 0;
+setKPI("kpiUnidadesMedia", unidadesMedia.toFixed(2));
   }
 
  filtroEstado.addEventListener("change", updateFiltered);
