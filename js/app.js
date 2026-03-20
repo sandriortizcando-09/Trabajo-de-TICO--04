@@ -162,7 +162,13 @@ async function init() {
   // Filtros + KPIs recalculados desde detalle
   let detalle = [];
   try { detalle = await fetchCSV("data/detalle.csv"); } catch (e) { detalle = []; }
-
+detalle = detalle.map(d => ({
+  estado: d["Estado"],
+  nivel_de_rentabi: d["Nivel_de_rentabilidad"],
+  producto: d["Producto"],
+  unidades_vendida: Number(d["Unidades_vendidas"] || 0),
+  Beneficio_total_eur: Number(d["beneficio_total_num"] || 0)
+}));
   const filtroEstado = document.getElementById("filtroEstado");
   const filtroNivel = document.getElementById("filtroNivel");
   const btnReset = document.getElementById("btnReset");
