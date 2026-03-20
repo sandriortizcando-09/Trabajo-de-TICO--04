@@ -204,7 +204,7 @@ btnReset.addEventListener("click", () => {
 
 updateFiltered();   // 
 
-} // ← cierre de init()
+} // 
 
 init().catch(err => {
   console.error(err);
