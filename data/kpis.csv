@@ -1,6 +1,5 @@
-SELECT
-  COUNT(*) AS num_registros,
-  SUM(unidades_vendida) AS total_unidades,
-  ROUND(SUM(beneficio_total_eur), 2) AS beneficio_total,
-  ROUND(AVG(beneficio_total_eur), 2) AS beneficio_medio
-FROM tienda_limpia;
+"nivel","beneficio_total"
+"","0"
+"ALTA","280"
+"BAJA","3066"
+"MEDIA","795"

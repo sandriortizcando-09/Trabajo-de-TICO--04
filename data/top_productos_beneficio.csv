@@ -1,8 +1,4 @@
-SELECT
-  Producto,
-  ROUND(SUM(beneficio_total_eur), 2) AS beneficio_total,
-  SUM(Unidades_vendida) AS unidades
-FROM tienda_limpia
-GROUP BY Producto
-ORDER BY beneficio_total DESC
-LIMIT 10;
+"estado","num_ventas","unidades"
+"","18","null"
+"RENTABLE","12","19"
+"REVISAR","10","22"

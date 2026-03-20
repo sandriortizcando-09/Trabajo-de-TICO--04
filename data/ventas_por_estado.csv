@@ -1,7 +1,4 @@
-SELECT
-  Estado,
-  COUNT(*) AS num_ventas,
-  SUM(Unidades_vendida) AS unidades
-FROM tienda_limpia
-GROUP BY Estado
-ORDER BY num_ventas DESC;
+"estado","num_ventas","unidades"
+"","18","null"
+"RENTABLE","12","19"
+"REVISAR","10","22"
