@@ -193,16 +193,18 @@ detalle = detalle.map(d => ({
     setKPI("kpiBeneficioMedio", num ? (beneficio / num).toFixed(2) : "0.00");
   }
 
-  filtroEstado.addEventListener("change", updateFiltered);
-  filtroNivel.addEventListener("change", updateFiltered);
-  btnReset.addEventListener("click", () => {
-    filtroEstado.value = "";
-    filtroNivel.value = "";
-    updateFiltered();
-  });
+ filtroEstado.addEventListener("change", updateFiltered);
+filtroNivel.addEventListener("change", updateFiltered);
 
+btnReset.addEventListener("click", () => {
+  filtroEstado.value = "";
+  filtroNivel.value = "";
   updateFiltered();
-}
+});
+
+updateFiltered();   // 
+
+} // ← cierre de init()
 
 init().catch(err => {
   console.error(err);
